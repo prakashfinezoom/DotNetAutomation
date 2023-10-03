@@ -35,6 +35,10 @@ steps:
 - script: 
    dotnet tool install --global PowerShell
   displayName: Powershell installation
+
+- script: 
+   dotnet build
+  displayName: Dotnet Build
     
 - script: | 
    pwsh PlaywrightTests\bin\Debug\net7.0\playwright.ps1 install
