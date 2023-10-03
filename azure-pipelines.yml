@@ -29,7 +29,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: 
-   dotnet new nunit -n PlaywrightTests
+   dotnet new nunit -n PlaywrightTests --force
   displayName: New Folder
 
 - script: 
