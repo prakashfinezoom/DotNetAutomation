@@ -33,6 +33,10 @@ steps:
   displayName: New Folder
 
 - script: 
+    dotnet add package Microsoft.Playwright.NUnit
+  displayName: Playwright Dependencies
+
+- script: 
    dotnet tool install --global PowerShell
   displayName: Powershell installation
 
