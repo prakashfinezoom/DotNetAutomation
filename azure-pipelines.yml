@@ -28,6 +28,18 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- script: 
+   dotnet new nunit -n PlaywrightTests
+  displayName: New Folder
+
+- script: 
+   dotnet tool install --global PowerShell
+  displayName: Powershell installation
+    
+- script: | 
+   pwsh PlaywrightTests\bin\Debug\net7.0\playwright.ps1 install
+  displayName: Playwright browser
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
